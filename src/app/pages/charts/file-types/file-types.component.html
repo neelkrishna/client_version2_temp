@@ -1,0 +1,26 @@
+<div class="col-lg-12">
+    <nb-card>
+      <span>
+        <nb-card-header>File Type Trends: image/jpg, June-October</nb-card-header>
+        <div class="dropdown btn-group col-lg-3" ngbDropdown>
+            <button type="button" class="btn btn-primary">Monthly</button>
+            <button type="button" class="btn btn-primary" ngbDropdownToggle></button>
+            <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item">Daily</li>
+            <li class="dropdown-item">Weekly</li>
+            <li class="dropdown-item">Quarterly</li>
+            </ul>
+        </div>
+        <div class="dropdown btn-group col-lg-4" ngbDropdown>
+            <button type="button" class="btn btn-primary">image/jpg</button>
+            <button type="button" class="btn btn-primary" ngbDropdownToggle></button>
+            <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let fileType of fileTypes">{{fileType.title}}</li>
+            </ul>
+        </div>
+      </span>
+      <nb-card-body>
+        <ngx-echarts-bar category="fileTypes"></ngx-echarts-bar>
+      </nb-card-body>
+    </nb-card>
+  </div>

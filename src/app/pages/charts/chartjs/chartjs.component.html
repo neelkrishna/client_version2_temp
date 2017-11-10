@@ -1,0 +1,22 @@
+<nb-card>
+  <nb-card-header>
+    Terms Found in Highest Number of Files: Aug 28, 2017
+    <div class="dropdown btn-group col-lg-2" ngbDropdown>
+      <button type="button" class="btn btn-primary">Daily</button>
+      <button type="button" class="btn btn-primary" ngbDropdownToggle></button>
+      <ul class="dropdown-menu" ngbDropdownMenu>
+          <li class="dropdown-item">Weekly</li>
+          <li class="dropdown-item">Monthly</li>
+          <li class="dropdown-item">Annually</li>
+      </ul>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="padding-10px">
+      <b>To sort by a column, click on the column name.</b>
+    </div>
+    <ng2-smart-table [settings]="termsettings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

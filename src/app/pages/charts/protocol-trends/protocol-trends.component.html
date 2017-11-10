@@ -1,0 +1,26 @@
+<div class="col-lg-12">
+    <nb-card>
+      <span>
+        <nb-card-header>Protocol Trends: Tor, Aug 28-Sept 3</nb-card-header>
+        <div class="dropdown btn-group col-lg-3" ngbDropdown>
+            <button type="button" class="btn btn-primary">Daily</button>
+            <button type="button" class="btn btn-primary" ngbDropdownToggle></button>
+            <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item">Weekly</li>
+            <li class="dropdown-item">Monthly</li>
+            <li class="dropdown-item">Quarterly</li>
+            </ul>
+        </div>
+        <div class="dropdown btn-group col-lg-4" ngbDropdown>
+            <button type="button" class="btn btn-primary">Tor</button>
+            <button type="button" class="btn btn-primary" ngbDropdownToggle></button>
+            <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let dataPoint of data">{{dataPoint.protocol}}</li>
+            </ul>
+        </div>
+      </span>
+      <nb-card-body>
+        <ngx-echarts-bar category="ProtocolTrends"></ngx-echarts-bar>
+      </nb-card-body>
+    </nb-card>
+  </div>

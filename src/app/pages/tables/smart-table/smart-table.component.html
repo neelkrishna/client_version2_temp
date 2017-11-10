@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header>
+    New Files By Protocol For Aug 28, 2017
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="padding-10px">
+      <b>To sort by a column, click on the column name.</b>
+    </div>
+    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
